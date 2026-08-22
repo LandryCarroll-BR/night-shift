@@ -1,0 +1,57 @@
+{
+  "description": "HeroSection",
+  "id": "hero_section",
+  "name": "HeroSection",
+  "type": "SharedSlice",
+  "variations": [
+    {
+      "description": "Default",
+      "docURL": "...",
+      "id": "default",
+      "imageUrl": "https://images.prismic.io/night-shift/shared-slices/hero_section/default/075fb7f5761ba47c9a275d72690782ab21f069a4.png?auto=compress%2Cformat",
+      "name": "Default",
+      "primary": {
+        "heading": {
+          "config": {
+            "allowTargetBlank": true,
+            "label": "Heading",
+            "multi": "strong,em,hyperlink,heading1",
+            "placeholder": ""
+          },
+          "type": "StructuredText"
+        },
+        "text": {
+          "config": {
+            "allowTargetBlank": true,
+            "label": "Text",
+            "multi": "paragraph,strong,em,hyperlink",
+            "placeholder": ""
+          },
+          "type": "StructuredText"
+        },
+        "links": {
+          "config": {
+            "allowTargetBlank": true,
+            "allowText": true,
+            "label": "Links",
+            "placeholder": "",
+            "repeat": true,
+            "select": null
+          },
+          "type": "Link"
+        },
+        "video": {
+          "config": {
+            "allowText": true,
+            "label": "Video",
+            "placeholder": "",
+            "repeat": false,
+            "select": "media"
+          },
+          "type": "Link"
+        }
+      },
+      "version": "initial"
+    }
+  ]
+}
