@@ -1,16 +1,18 @@
-import { Geist, Geist_Mono, Instrument_Sans, Instrument_Serif } from "next/font/google"
+import { Instrument_Sans, Instrument_Serif } from "next/font/google"
 
 import "@workspace/ui/globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@workspace/ui/lib/utils";
+import { cn } from "@workspace/ui/lib/utils"
 
-const instrumentSerifHeading = Instrument_Serif({subsets:['latin'],weight:['400'],variable:'--font-heading'});
-
-const instrumentSans = Instrument_Sans({subsets:['latin'],variable:'--font-sans'})
-
-const fontMono = Geist_Mono({
+const instrumentSerifHeading = Instrument_Serif({
   subsets: ["latin"],
-  variable: "--font-mono",
+  weight: ["400"],
+  variable: "--font-heading",
+})
+
+const instrumentSans = Instrument_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
 })
 
 export default function RootLayout({
@@ -22,7 +24,13 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", instrumentSans.variable, instrumentSerifHeading.variable)}
+      className={cn(
+        "antialiased",
+        "dark",
+        "font-sans",
+        instrumentSans.variable,
+        instrumentSerifHeading.variable
+      )}
     >
       <body>
         <ThemeProvider>{children}</ThemeProvider>
