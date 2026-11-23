@@ -1,16 +1,18 @@
-import { Instrument_Sans, Instrument_Serif } from "next/font/google"
+import { Cormorant_Garamond, Poppins } from "next/font/google"
 
 import "@workspace/ui/globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@workspace/ui/lib/utils"
+import { PrismicPreview } from "@prismicio/next"
+import { repositoryName } from "@/lib/prismicio"
 
-const instrumentSerifHeading = Instrument_Serif({
+const instrumentSerifHeading = Poppins({
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["900"],
   variable: "--font-heading",
 })
 
-const instrumentSans = Instrument_Sans({
+const instrumentSans = Cormorant_Garamond({
   subsets: ["latin"],
   variable: "--font-sans",
 })
@@ -35,6 +37,7 @@ export default function RootLayout({
       <body>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
+      <PrismicPreview repositoryName={repositoryName} />
     </html>
   )
 }

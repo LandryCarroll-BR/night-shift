@@ -12,6 +12,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@prismicio/client": "^7.22.0",
+    "@prismicio/next": "^2.3.0",
+    "@prismicio/react": "^3.4.1",
     "@remixicon/react": "^4.9.0",
     "@workspace/ui": "workspace:*",
     "next": "16.2.6",

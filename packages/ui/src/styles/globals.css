@@ -198,6 +198,11 @@
   clip-path: polygon(50% 0, 100% 0, 50% 100%, 0 100%);
 }
 
+/* Keep heading fonts black, overriding layered typography and weight utilities. */
+.font-heading {
+  font-weight: 900;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
